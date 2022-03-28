@@ -1,0 +1,136 @@
+<html>
+   <head>
+      <script>
+         //function that display value
+         function dis(val)
+         {
+             document.getElementById("result").value+=val
+         }
+           
+         //function that evaluates the digit and return result
+         function solve()
+         {
+             let x = document.getElementById("result").value
+             let y = eval(x)
+             document.getElementById("result").value = y
+         }
+           
+         //function that clear the display
+         function clr()
+         {
+             document.getElementById("result").value = ""
+          }
+          function del() {
+      var input = document.getElementById("result");
+      input.value = input.value.substring(0, input.value.length - 1);
+   }
+          
+        
+      </script>
+      <!-- for styling -->
+      <style>
+      .view{
+         background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlncYB9NG0kbIv-x86QWbA9CJKkVRWs13ofQ&usqp=CAU);
+         background-position: center;
+         background-size: cover;
+         height: 56vh;
+         width:  60%;
+         padding-top: 10%;
+         padding-left: 40%;
+         zoom: 230%;
+      
+      }
+         .title{
+         margin-bottom: 10px;
+         text-align:center;
+         width: 200px;
+         padding-top: 2px;
+         font-size: 20px;
+         color:cyan;
+         padding: auto;
+         border: solid darkred; 2px;
+         }
+  
+         input[type="button"]
+         {
+         background-color:lightgoldenrodyellow;
+         color: black;
+         padding-top: 10%;
+         border: solid palevioletred; 2px;
+         width:100%
+         }
+         
+  
+         input[type="text"]
+         {
+         background-color:mistyrose;
+         width:100%
+         }
+         input[type="button"]:hover {
+         cursor: pointer;
+        background-color: darkgrey;
+        color: black;
+        border:3px goldenrod;
+         }
+        input[type="button"].check{
+        background-color: darkred;
+          }
+          input[type="button"].val{
+          background-color: teal;
+          }
+      </style>
+   </head>
+   <!-- create table -->
+   <body>
+      <section class="view">
+      <div class = title >𝓜𝓨 𝓒𝓐𝓛𝓒𝓤𝓛𝓐𝓣𝓞𝓡</div>
+      <table border="5">
+         <tr>
+            <td colspan="6"><input type="text" id="result"/></td>
+            <!-- clr() function will call clr to clear all value -->
+           
+         </tr>
+         <tr>
+            <!-- create button and assign value to each button -->
+            <!-- dis("1") will call function dis to display value -->
+            <td><input type="button" value="1" onclick="dis('1')"/> </td>
+            <td><input type="button" value="2" onclick="dis('2')"/> </td>
+            <td><input type="button" value="3" onclick="dis('3')"/> </td>
+            <td><input type="button"  class="val" value="+" onclick="dis('+')"/> </td>
+            <td><input type="button" class="check" value="&#8592;" onclick="del()"/> </td>
+            
+             
+         </tr>
+         <tr>
+            <td><input type="button" value="4" onclick="dis('4')"/> </td>
+            <td><input type="button" value="5" onclick="dis('5')"/> </td>
+            <td><input type="button" value="6" onclick="dis('6')"/> </td>
+            <td><input type="button" class="val" value="-" onclick="dis('-')"/> </td>
+            <div class="redd">
+           <td><input type="button" class="check" value="A C" onclick="clr()"/> </td>
+        </div>
+            
+
+
+         </tr>
+         <tr>
+            <td><input type="button" value="7" onclick="dis('7')"/> </td>
+            <td><input type="button" value="8" onclick="dis('8')"/> </td>
+            <td><input type="button" value="9" onclick="dis('9')"/> </td>
+            <td><input type="button" class="val" value="*" onclick="dis('*')"/> </td>
+            <td><input type="button"  class="check" value="00" onclick="dis('00')"/> </td>
+         </tr>
+         <tr>
+            <div class="hi">
+            <td><input type="button" value="." onclick="dis('.')"/> </td>
+            <td><input type="button" value="0" onclick="dis('0')"/> </td>
+            <!-- solve function call function solve to evaluate value -->
+            <td><input type="button" value="=" onclick="solve()"/> </td>
+            <td><input type="button"  class="val"  value="/" onclick="dis('/')"/> </td>
+            <td><input type="button" class="check" value="000" onclick="dis('000')"/> </td>
+         </div>
+         </tr>
+      </table>
+      </section>
+   </body>
+</html>   
