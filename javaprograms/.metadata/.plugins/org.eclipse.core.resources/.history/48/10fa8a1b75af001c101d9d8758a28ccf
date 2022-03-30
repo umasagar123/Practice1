@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class prg1 {
+
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		
+		// TODO Auto-generated method stub
+		int x= sc.nextInt();
+		int y=sc.nextInt();
+		int z=sc.nextInt();
+		System.out.println("Enter the no of pizzas bought:"+ x);
+		System.out.println("Enter the no of puffs bought:"+ y);
+		System.out.println("Enter the no of cool drinks bought:"+ z);
+	}
+
+}
